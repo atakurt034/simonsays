@@ -8,7 +8,7 @@ app.use(express.static('public'))
 const __dirname = path.resolve()
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname + '/index.html'))
+  res.sendFile(__dirname + '/index.html')
 })
 
 const PORT = 3000
@@ -16,4 +16,4 @@ if (PORT == null || PORT == '') {
   PORT = 3000
 }
 
-app.listen(PORT, console.log('Server started at port 3000'))
+app.listen(PORT, (req, res) => console.log('Server started at port 3000'))
