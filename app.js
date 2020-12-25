@@ -11,6 +11,9 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html')
 })
 
-const PORT = 3000 || ''
+const PORT = 3000
+if (PORT == null || PORT == '') {
+  PORT = 3000
+}
 
 app.listen(PORT, console.log('Server started at port 3000'))
