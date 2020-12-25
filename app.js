@@ -8,7 +8,7 @@ app.use(express.static('public'))
 const __dirname = path.resolve()
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/index.html')
+  res.sendFile(path.join(__dirname + '/index.html'))
 })
 
 const PORT = 3000
