@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname + '/index.html'))
 })
 
-const PORT = 3000
+let PORT = process.env.PORT
 if (PORT == null || PORT == '') {
   PORT = 3000
 }
